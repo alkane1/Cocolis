@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Co-Colis',
+      title: 'SenColis',
       theme: ThemeData(
         // Utilisez useMaterial3: true pour un thème moderne
         colorSchemeSeed: Colors.teal, // Couleur principale (Teal)
@@ -47,8 +47,12 @@ class _MainScreenState extends State<MainScreen> {
     // Vos Colis (Nous allons utiliser une version sans les arguments inutiles ici)
     VosColisScreen(),
     // Messages
-    Center(child: Text('Page Messages (WIP)')),
+    const Messages(
+      interlocutorName: 'Nom du Voyageur Factice', // Valeur String requise
+      parcelContext: 'Colis vers Lyon (5kg)',     // Valeur String requise
+    ),
     // Profil
+    ProfilScreen(),
     Center(child: Text('Page Profil (WIP)')),
   ];
 
